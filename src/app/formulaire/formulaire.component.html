@@ -1,0 +1,20 @@
+<div class="row d-flex justify-content-center mt-5">
+	<div class="alert alert-danger" role="alert"
+		 *ngIf="test_add_danger_alert">
+		L'url est invalide. Vérifiez que celle-ci soit bien un feed.
+	</div>
+
+	<div class="col-sm-6 col-sm-offset-4">
+		<form (ngSubmit)="OnSubmit(f)" #f="ngForm">
+			<div class="form-group">
+				<h6><label for="name">Nom du site</label></h6>
+				<input type="text" id="name" class="form-control" name="name" ngModel required>
+			</div>
+			<div class="form-group">
+				<h6><label for="url">Url du Flux</label></h6>
+				<input type="text" id="url" class="form-control" name="url" ngModel required>
+			</div>
+			<button type="submit" class="btn btn-primary" [disabled]="f.invalid">Ajouter le Flux</button>
+		</form>
+	</div>
+</div>

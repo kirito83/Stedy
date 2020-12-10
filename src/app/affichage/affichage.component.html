@@ -1,0 +1,55 @@
+<div class="container">
+	<div class="alert alert-success" role="alert"
+		 *ngIf="test_add_success_alert">
+		Le flux RSS à bien été ajouté.
+	</div>
+
+	<div class="alert alert-danger" role="alert"
+		 *ngIf="test_del_danger_alert">
+		Désolé, vous ne pouvez pas supprimer le flux RSS du site "Le Monde". Celui-ci est protégé par StedY.
+	</div>
+
+	<div class="alert alert-success" role="alert"
+		 *ngIf="test_del_success_alert">
+		Le site a bien été supprimé.
+	</div>
+
+	<form (ngSubmit)="DelRssFeedData(f)" #f="ngForm">
+		<div class="form-group text-center">
+			<h5><label for="FeedDataSelector">Choisissez un site à consulter</label></h5>
+			<div class="row d-flex justify-content-center">
+				<select name="selector" class="form-control" id="FeedDataSelector"
+						(change)="GetRssFeedData($event.target.value)"
+						[ngStyle]="{'width': (test_choice) ? '40%' : '50%'}" ngModel>
+					<option *ngFor="let o of sites"
+							value="{{ o.value }}">
+					{{ o.name }}
+					</option>
+				</select>
+				<button id="del_button" type="submit" class="btn btn-danger" 
+						*ngIf="test_choice">
+					Supprimer
+				</button>
+			</div>
+		</div>
+		<div class="form-group text-center">
+			<button type="button" class="btn btn-primary" 
+					(click)="GetRssFeedData('https://www.lemonde.fr/rss/une.xml')"
+					*ngIf="!test_choice">
+				Afficher les articles du site "Le Monde"
+			</button>
+		</div>
+	</form>
+
+	<div class="container mt-5" *ngIf="test_choice">
+		<h2>
+			{{RssData?.rss.channel[0].title[0]}}
+		</h2>
+		<p> Nombre d'articles : {{ RssData?.rss.channel[0].item.length }} </p>
+		<ul>
+			<li class="card" *ngFor="let o of RssData?.rss.channel[0].item">
+				<a href="{{ o.link[0] }}"> {{ o.title[0] }} </a>
+			</li>
+		</ul>
+	</div>
+</div>
