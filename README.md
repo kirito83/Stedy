@@ -1,6 +1,6 @@
-# Test
+# Test technique StedY
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
+Ce projet à été réalisé par Calvin Triqueneaux.
 
 ## Development server
 
