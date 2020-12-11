@@ -43,17 +43,17 @@ Néanmoins, après un long moment à implémenter de multiples solutions potenti
 Pour dire vrai, cette solution ne me convenait pas du tout, puisqu'elle demande à l'utilisateur davantage de manipulations pour fonctionner.
 Cependant, par manque de temps, j'ai décidé de la conserver dans l'attente d'une meilleure solution.
 
-### Fonctionalités
+### Fonctionnalités
 
 #### Ajouter un url
 
-La première fonctionalité que j'ai ajouté était de pouvoir insérer un site à la liste déjà existante.
+La première fonctionnalité que j'ai ajouté était de pouvoir insérer un site à la liste déjà existante.
 Pour ce faire, j'ai décidé de créer un formulaire afin que l'utilisateur puisse insérer dans la liste un nouvel URL et lui donner un nom.
 Afin d'accéder à ce formulaire, j'ai mis en place une barre de navigation.
 
 #### Supprimer un url
 
-L'autre fonctionalité primordiale était de pouvoir supprimer un url déjà existant.
+L'autre fonctionnalité primordiale était de pouvoir supprimer un url déjà existant.
 Pour cela, j'ai ajouté un bouton "Supprimer" à côté du nom donné à l'url une fois celui-ci affiché.
 
 #### Alerter l'utilisateur
