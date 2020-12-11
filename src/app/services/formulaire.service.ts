@@ -29,7 +29,7 @@ export class FormulaireService {
 	  	];
 	}
 
-	addRssFeed (name: string, url: string) {
+	addRssFeed (name: string, url: string): boolean {
 		const feedObject = {
 			name: '',
 			value: ''
@@ -39,6 +39,7 @@ export class FormulaireService {
 			responseType: "text",
 			mode: "cors"
 		};
+		var result = false;
 
 		this.http
 			.get<any>(url, requestOptions)
@@ -51,19 +52,21 @@ export class FormulaireService {
 				feedObject.value = url;
 				this.sites.push(feedObject);
 				this.router.navigate(['/affichage']);
-				return true;
+				result = true
 			});
+
+		return result;
 	};
 
-	delRssFeed (value: string) {
+	delRssFeed (value: string): boolean {
 		if (value != 'https://www.lemonde.fr/rss/une.xml' && value != '') {
 			for (let site of this.sites) {
 				if (site.value == value) {
 					const index = this.sites.indexOf(site, 0);
+					
 					if (index > -1) {
 						this.sites.splice(index, 1);
 					}
-					console.log(index);
 					break;
 				}
 			}

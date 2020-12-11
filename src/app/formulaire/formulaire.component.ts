@@ -22,10 +22,7 @@ export class FormulaireComponent {
 		const url = form.value['url'];
 		const test_buff = this.formulaireService.addRssFeed(name, url);
 		
-		if (test_buff == true) { }
-		else {
-			this.test_add_danger_alert = true;
-		}
-	} 
+		this.test_add_danger_alert = (test_buff) ? false : true;
+	}
 
 }
