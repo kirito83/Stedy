@@ -7,8 +7,11 @@ Pour ce faire, j'ai choisi d'utiliser principalement le framework Angular afin d
 
 ## Technologies
 
-- HTML / CSS
 - Angular
+- HTML
+- SCSS
+- Typescript
+- Javascript
 - Bootstrap
 - Git
 
