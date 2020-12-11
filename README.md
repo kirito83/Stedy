@@ -80,5 +80,5 @@ Comme indiqué précédemment, pouvoir contourner l'autorisation CORS sans avoir
 Enfin, une autre amélioration utile serait de convertir les urls entrés par l'utilisaeur en fil RSS.
 En effet, cela permettrait à l'utilisateur d'entrer directement l'url du site pour consulter son flux RSS au lieu de devoir trouver son fil RSS en amont.
 
-![](https://img.shields.io/github/last-commit/kirito83/Stedy)
+![](https://img.shields.io/github/last-commit/kirito83/Stedy/master)
 ![](https://img.shields.io/github/followers/kirito83?label=follow&style=social)
