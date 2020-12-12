@@ -22,7 +22,7 @@ Pour ce faire, j'ai choisi d'utiliser principalement le framework Angular afin d
 
 ## Ressources Nécessaires
 
-Afin que l'application fonctionne correctement, vous devez ajouter l'extension "Cross Domain - CORS" à votre navigateur Chrome.
+Afin que l'application fonctionne correctement, vous devez ajouter l'extension [Cross Domain - CORS](https://chrome.google.com/webstore/detail/cross-domain-cors/mjhpgnbimicffchbodmgfnemoghjakai) à votre navigateur Chrome.
 
 ## Déroulement du projet
 
